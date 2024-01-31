@@ -24,8 +24,8 @@ void removeElement(int arr[],int ele,int n)
 {
   for(int i=0;i<n+1;i++){
     if(arr[i]==ele){
-       for(int j=i;n-11>i;j++){
-        arr[i]=arr[j+1];
+       for(int j=i;j<n-1;j++){
+        arr[j]=arr[j+1];
        }
     }
 }
@@ -41,7 +41,7 @@ for(int i=0;i<n+1;i++){
 }
 searching(arr,23,n);
 removeElement(arr,23,n);
-for(int i=0;i<n;i++){
+for(int i=0;i<n-1;i++){
     cout<<arr[i]<<endl;
 }
 return 0;
