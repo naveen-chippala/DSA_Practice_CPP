@@ -13,9 +13,9 @@ return n*pow(n,p-1);//
 }
 }
 int main(){
-double ans,n,p;
-cout<<"enter the n and p values"<<endl;//to calculate n power p value
-cin>>n>>p;
-ans= pow(n,p);
-cout<<n<<"power"<<p<<"is"<<ans;
+//double ans,n,p;
+//cout<<"enter the n and p values"<<endl;//to calculate n power p value
+//cin>>n>>p;
+double ans= pow(2,3);
+cout<<"powers"<<ans;
 }

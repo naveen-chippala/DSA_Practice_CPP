@@ -20,19 +20,21 @@ for(int i=0;i<n+1;i++){
 cout<<"element not found"<<endl;
 
 }
-void removeElement(int arr[],int ele,int n)
+int removeElement(int arr[],int ele,int n)
 {
   for(int i=0;i<n+1;i++){
     if(arr[i]==ele){
        for(int j=i;j<n-1;j++){
         arr[j]=arr[j+1];
+        n--;
        }
     }
 }
+return n;
 }
 
 int main(){
-int arr[]={1,2,3,4,5};
+int arr[]={1,2,3,4,5,2,2,3,2};
 int n=sizeof(arr)/sizeof(arr[0]);
 insertArray(arr,n,23,2);
 
@@ -40,8 +42,8 @@ for(int i=0;i<n+1;i++){
     cout<<arr[i]<<endl;
 }
 searching(arr,23,n);
-removeElement(arr,23,n);
-for(int i=0;i<n-1;i++){
+int size2=removeElement(arr,2,n);
+for(int i=0;i<size2;i++){
     cout<<arr[i]<<endl;
 }
 return 0;
